@@ -12,4 +12,5 @@ import java.io.Serializable;
     private String email;
     private String contraseña;   
     private String fechanacimiento;
+    private int n;
 }
