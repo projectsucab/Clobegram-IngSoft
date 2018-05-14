@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping(value="/customer", produces = "application/json")
+@RequestMapping(value="/usuario", produces = "application/json")
 
 
 public class UsuarioController {
@@ -24,12 +24,12 @@ public class UsuarioController {
     
     
     @RequestMapping(value = "/signup", consumes = "application/json", method = RequestMethod.POST)
-    public ResponseEntity registrar(@Valid @RequestBody UsuarioSignUpCommand command) {
+    public ResponseEntity SignUp (@Valid @RequestBody UsuarioSignUpCommand command) {
         return usuarioService.validacionResgitroUsuario(command);
     }
 
     @RequestMapping(value = "/signin", consumes = "application/json", method = RequestMethod.POST)
-    public ResponseEntity login(@Valid @RequestBody UsuarioSignInCommand command) {
+    public ResponseEntity SignIn (@Valid @RequestBody UsuarioSignInCommand command) {
         return usuarioService.SignIn(command);
     }
 
